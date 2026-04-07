@@ -3,10 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best Cleaning Services</title>
+<title>Best Cleaning Services | Home & Office Cleaning</title>
+
+<meta name="description" content="Professional home and office cleaning services. Book trusted cleaners near you. Affordable and reliable.">
+
+<!-- Tracking Code -->
+<script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
+<script>
+window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
+publytics('pageview');
+</script>
 
 <style>
-* {
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -14,33 +23,19 @@
 
 body {
   font-family: Arial, sans-serif;
+  background:#f5f7fa;
 }
 
-/* 🔥 Hide initially to prevent flicker */
+/* 🔥 Hide initially to remove flicker */
 body.hidden {
   visibility:hidden;
 }
 
-/* MOBILE IMAGE */
-.mobile-image {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  display:none;
-  z-index:999;
-}
-
-.mobile-image img {
-  width:100%;
-  height:100%;
-  object-fit:fill; /* 🔥 NO CROP NO BLACK */
-}
-
-/* DESKTOP WEBSITE (ORIGINAL GOOD DESIGN RESTORED) */
-.main-content {
-  display:block;
+/* Layout */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
 }
 
 /* Header */
@@ -76,12 +71,6 @@ header {
 }
 
 /* Services */
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
 .services {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -105,11 +94,30 @@ footer {
   color:#555;
 }
 
-/* MOBILE MODE */
-@media (max-width:768px){
+/* MOBILE IMAGE */
+.mobile-image {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:999;
+}
+
+.mobile-image img {
+  width:100%;
+  height:100%;
+  object-fit:fill; /* 🔥 NO CROP + NO BLACK (STRETCH) */
+}
+
+/* Responsive */
+@media (max-width:768px) {
+
   body.image-mode .main-content {
     display:none;
   }
+
   body.image-mode .mobile-image {
     display:block;
   }
@@ -117,9 +125,10 @@ footer {
 </style>
 
 <script>
+/* 🔥 ONLY CONTROL */
 var imageOnlyMode = true; // true = mobile image only
 
-window.onload = function(){
+window.onload = function() {
   if(imageOnlyMode && window.innerWidth <= 768){
     document.body.classList.add("image-mode");
   }
@@ -133,14 +142,14 @@ window.onload = function(){
 
 <body class="hidden">
 
-<!-- MOBILE IMAGE -->
+<!-- 📱 Mobile Image Only -->
 <div class="mobile-image">
   <a href="https://wa.me/918851521863">
-    <img src="innings.png" alt="Offer">
+    <img src="innings.png" alt="Cleaning Service">
   </a>
 </div>
 
-<!-- DESKTOP WEBSITE -->
+<!-- 🌐 Main Website -->
 <div class="main-content">
 
 <header>
@@ -149,35 +158,50 @@ window.onload = function(){
 
 <div class="container">
 
-<div class="hero">
-  <h1>Professional Cleaning Services</h1>
-  <p>Home & Office Cleaning at Affordable Prices</p>
-  <a href="https://wa.me/918851521863" class="btn">Book Now on WhatsApp</a>
-</div>
-
-<div class="services">
-
-  <div class="card">
-    <h3>Home Cleaning</h3>
-    <p>Deep cleaning for kitchens, bathrooms, and full home sanitization.</p>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Professional Cleaning Services</h1>
+    <p>Home & Office Cleaning at Affordable Prices</p>
+    <a href="https://wa.me/918851521863" class="btn">Book Now on WhatsApp</a>
   </div>
 
-  <div class="card">
-    <h3>Office Cleaning</h3>
-    <p>Professional cleaning for offices and commercial spaces.</p>
+  <!-- Services -->
+  <div class="services">
+
+    <div class="card">
+      <h3>Home Cleaning</h3>
+      <p>Deep cleaning for kitchens, bathrooms, and full home sanitization.</p>
+    </div>
+
+    <div class="card">
+      <h3>Office Cleaning</h3>
+      <p>Professional cleaning for offices, shops, and commercial spaces.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sofa & Carpet</h3>
+      <p>Remove dirt, stains, and bacteria with deep cleaning solutions.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bathroom Cleaning</h3>
+      <p>Complete hygiene cleaning with advanced tools and chemicals.</p>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>Sofa Cleaning</h3>
-    <p>Remove stains, dust, and bacteria effectively.</p>
+  <!-- About -->
+  <div class="card" style="margin-top:30px;">
+    <h3>About Us</h3>
+    <p>We provide trusted and affordable cleaning services with trained professionals. Our goal is to deliver high-quality cleaning for homes and offices.</p>
   </div>
 
-  <div class="card">
-    <h3>Bathroom Cleaning</h3>
-    <p>Complete hygiene cleaning with advanced tools.</p>
+  <!-- Contact -->
+  <div class="card" style="margin-top:20px;">
+    <h3>Contact Us</h3>
+    <p>Phone / WhatsApp: +91 8851521863</p>
+    <p>Email: support@cleaningservices.com</p>
   </div>
-
-</div>
 
 </div>
 
