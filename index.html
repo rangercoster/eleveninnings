@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Cleaning Services</title>
 
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 🔥 Hide initially to prevent flicker */
+body.hidden {
+  visibility:hidden;
+}
+
+/* MOBILE IMAGE */
+.mobile-image {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  z-index:999;
+}
+
+.mobile-image img {
+  width:100%;
+  height:100%;
+  object-fit:fill; /* 🔥 NO CROP NO BLACK */
+}
+
+/* DESKTOP WEBSITE (ORIGINAL GOOD DESIGN RESTORED) */
+.main-content {
+  display:block;
+}
+
+/* Header */
+header {
+  background:#0d6efd;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+/* Hero */
+.hero {
+  background:linear-gradient(to right, #0d6efd, #00c6ff);
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+  border-radius:12px;
+}
+
+.hero h1 {
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.btn {
+  display:inline-block;
+  background:#ff9800;
+  color:white;
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  margin-top:15px;
+}
+
+/* Services */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.services {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+  font-size:14px;
+  color:#555;
+}
+
+/* MOBILE MODE */
+@media (max-width:768px){
+  body.image-mode .main-content {
+    display:none;
+  }
+  body.image-mode .mobile-image {
+    display:block;
+  }
+}
+</style>
+
+<script>
+var imageOnlyMode = true; // true = mobile image only
+
+window.onload = function(){
+  if(imageOnlyMode && window.innerWidth <= 768){
+    document.body.classList.add("image-mode");
+  }
+
+  // remove flicker
+  document.body.classList.remove("hidden");
+}
+</script>
+
+</head>
+
+<body class="hidden">
+
+<!-- MOBILE IMAGE -->
+<div class="mobile-image">
+  <a href="https://wa.me/918851521863">
+    <img src="innings.png" alt="Offer">
+  </a>
+</div>
+
+<!-- DESKTOP WEBSITE -->
+<div class="main-content">
+
+<header>
+  <h2>Cleaning Services</h2>
+</header>
+
+<div class="container">
+
+<div class="hero">
+  <h1>Professional Cleaning Services</h1>
+  <p>Home & Office Cleaning at Affordable Prices</p>
+  <a href="https://wa.me/918851521863" class="btn">Book Now on WhatsApp</a>
+</div>
+
+<div class="services">
+
+  <div class="card">
+    <h3>Home Cleaning</h3>
+    <p>Deep cleaning for kitchens, bathrooms, and full home sanitization.</p>
+  </div>
+
+  <div class="card">
+    <h3>Office Cleaning</h3>
+    <p>Professional cleaning for offices and commercial spaces.</p>
+  </div>
+
+  <div class="card">
+    <h3>Sofa Cleaning</h3>
+    <p>Remove stains, dust, and bacteria effectively.</p>
+  </div>
+
+  <div class="card">
+    <h3>Bathroom Cleaning</h3>
+    <p>Complete hygiene cleaning with advanced tools.</p>
+  </div>
+
+</div>
+
+</div>
+
+<footer>
+  © 2026 Cleaning Services | All Rights Reserved
+</footer>
+
+</div>
+
+</body>
+</html>
