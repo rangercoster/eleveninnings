@@ -6,57 +6,78 @@
 <title>Cleaning Services</title>
 
 <style>
-html, body {
+* {
   margin:0;
   padding:0;
-  height:100%;
-  font-family: Arial, sans-serif;
-  background:#000;
+  box-sizing:border-box;
 }
 
-/* Hide everything initially to prevent flicker */
 body {
+  font-family: Arial, sans-serif;
+}
+
+/* 🔥 CONTROL */
+.mobile-image {
   display:none;
 }
 
-/* MAIN CONTENT */
 .main-content {
-  padding:20px;
-  background:#f5f7fa;
-  min-height:100vh;
+  display:block;
 }
 
-/* MOBILE IMAGE */
+/* MOBILE IMAGE FULL SCREEN */
 .mobile-image {
   position:fixed;
   top:0;
   left:0;
   width:100%;
   height:100%;
-  display:none;
-  background:#000;
 }
 
 .mobile-image img {
   width:100%;
   height:100%;
-  object-fit:contain; /* 👈 no crop */
+  object-fit:cover; /* 🔥 NO BLACK SPACE */
 }
 
-/* Desktop content */
+/* DESKTOP DESIGN (RESTORED & MODERN) */
 .header {
   background:#0d6efd;
   color:#fff;
-  padding:15px;
   text-align:center;
+  padding:15px;
 }
 
 .hero {
-  background:linear-gradient(to right, #0d6efd, #00c6ff);
+  background: linear-gradient(135deg,#0d6efd,#00c6ff);
   color:white;
-  padding:50px 20px;
+  padding:80px 20px;
   text-align:center;
-  border-radius:10px;
+}
+
+.hero h1 {
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero p {
+  font-size:18px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 20px;
+  background:#ff9800;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
 }
 
 .services {
@@ -67,13 +88,20 @@ body {
 }
 
 .card {
-  background:white;
+  background:#fff;
   padding:20px;
   border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* MOBILE MODE */
+footer {
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+  color:#555;
+}
+
+/* MOBILE SWITCH */
 @media (max-width:768px){
   body.image-mode .main-content {
     display:none;
@@ -85,14 +113,12 @@ body {
 </style>
 
 <script>
-/* 🔥 ONLY ONE CONTROL */
-var imageOnlyMode = true; // true = mobile image only
+var imageOnlyMode = true; // change true/false
 
-window.onload = function() {
+window.onload = function(){
   if(imageOnlyMode && window.innerWidth <= 768){
     document.body.classList.add("image-mode");
   }
-  document.body.style.display = "block"; // show after setup
 }
 </script>
 
@@ -103,11 +129,11 @@ window.onload = function() {
 <!-- MOBILE IMAGE -->
 <div class="mobile-image">
   <a href="https://wa.me/918851521863">
-    <img src="innings.png" alt="Offer">
+    <img src="innings.png">
   </a>
 </div>
 
-<!-- WEBSITE CONTENT -->
+<!-- DESKTOP WEBSITE -->
 <div class="main-content">
 
 <div class="header">
@@ -116,27 +142,39 @@ window.onload = function() {
 
 <div class="hero">
   <h1>Professional Cleaning Services</h1>
-  <p>Home & Office Cleaning at Affordable Prices</p>
+  <p>India’s Most Trusted Home & Office Cleaning</p>
+  <a href="https://wa.me/918851521863" class="btn">Book on WhatsApp</a>
 </div>
+
+<div class="container">
 
 <div class="services">
   <div class="card">
     <h3>Home Cleaning</h3>
-    <p>Deep cleaning for homes with expert staff.</p>
+    <p>Deep cleaning for kitchens, bedrooms and bathrooms.</p>
   </div>
+
   <div class="card">
     <h3>Office Cleaning</h3>
-    <p>Professional cleaning for offices & shops.</p>
+    <p>Professional cleaning for offices and shops.</p>
   </div>
+
   <div class="card">
     <h3>Sofa Cleaning</h3>
-    <p>Remove stains & dirt easily.</p>
+    <p>Remove stains and dust easily.</p>
   </div>
+
   <div class="card">
     <h3>Bathroom Cleaning</h3>
-    <p>Complete hygiene cleaning service.</p>
+    <p>Complete hygiene cleaning solutions.</p>
   </div>
 </div>
+
+</div>
+
+<footer>
+  © 2026 Cleaning Services
+</footer>
 
 </div>
 
